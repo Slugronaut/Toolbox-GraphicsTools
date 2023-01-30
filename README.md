@@ -12,3 +12,6 @@ Dependencies:
 [com.postegames.messagedispatcher](https://github.com/Slugronaut/Toolbox-MessageDispatch)  
 [com.postegames.trackables](https://github.com/Slugronaut/Toolbox-Trackables)  
 [com.postegames.typehelper](https://github.com/Slugronaut/Toolbox-TypeHelper)  
+
+Third-Party Dependencies:  
+[Odin](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041)  
