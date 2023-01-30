@@ -1,0 +1,30 @@
+{
+  "name": "com.postegames.graphicstools",
+  "version": "1.0.0",
+  "displayName": "PEGLIB - Graphics Tools",
+  "description": "Components, editors, and datatypes to help with scripting graphics related effects.",
+  "unity": "2022.2",
+  "keywords": [
+    "graphics",
+    "util",
+    "utility",
+    "library"
+  ],
+  "author": {
+    "name": "Sluggy",
+    "email": "jcsluggy@gmail.com",
+    "url": "http:/postegames.com"
+  },
+  "dependencies": {
+    "com.postegames.autocreatable": "",
+    "com.postegames.autonomousentities": "",
+    "com.postegames.collections": "",
+    "com.postegames.eventbehaviourframework": "",
+    "com.postegames.hashedstring": "",
+    "com.postegames.mathutils": "",
+    "com.postegames.messagebehaviourframework": "",
+    "com.postegames.messagedispatcher": "",
+    "com.postegames.trackables": "",
+    "com.postegames.typehelper": ""
+  }
+}
