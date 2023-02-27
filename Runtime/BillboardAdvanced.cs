@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using Sirenix.OdinInspector;
-
+using UnityEngine.Rendering;
 
 namespace Toolbox.Graphics
 {
@@ -28,6 +28,7 @@ namespace Toolbox.Graphics
             XRot = 1 << 3,
             YRot = 1 << 4,
             ZRot = 1 << 5,
+            Cull = 1 << 6,
         }
 
         [HideInInspector]
@@ -113,8 +114,19 @@ namespace Toolbox.Graphics
             }
         }
 
+        public bool Culled
+        {
+            get => (Sync & (sbyte)Flags.Cull) > 0;
+            private set
+            {
+                if (value)
+                    Sync |= (sbyte)Flags.Cull;
+                else Sync &= ~(sbyte)Flags.Cull;
+            }
+        }
 
-#if UNITY_EDITOR
+
+        #if UNITY_EDITOR
         //these are used in the editor to help alieviate lag when rotating the camera in the Scene view window
         int EditorSkip = 0;
         const int EditorSkipMax = 10;
@@ -129,6 +141,8 @@ namespace Toolbox.Graphics
 
         void OnWillRenderObject()
         {
+            if (RenderEventCapture.Instance == null) return;
+
             #if UNITY_EDITOR
             if (!Application.isPlaying && Application.isEditor)
             {
@@ -141,7 +155,7 @@ namespace Toolbox.Graphics
             EditorSkip = 0;
             #endif
 
-            ProcessBillboard(Camera.current.transform, false, UpdateXOffset, UpdateYOffset, UpdateZOffset, UpdateXRot, UpdateYRot, UpdateZRot);
+            ProcessBillboard(RenderEventCapture.Instance.CurrentCamera.transform, false, UpdateXOffset, UpdateYOffset, UpdateZOffset, UpdateXRot, UpdateYRot, UpdateZRot);
         }
     }
 

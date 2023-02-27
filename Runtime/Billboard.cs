@@ -33,6 +33,7 @@ namespace Toolbox.Graphics
 
         void OnWillRenderObject()
         {
+            if (RenderEventCapture.Instance == null) return;
             #if UNITY_EDITOR
             if (!Application.isPlaying && Application.isEditor)
             {
@@ -45,7 +46,7 @@ namespace Toolbox.Graphics
             EditorSkip = 0;
             #endif
 
-            ProcessBillboard(Camera.current.transform);
+            ProcessBillboard(RenderEventCapture.Instance.CurrentCamera.transform);
         }
     }
 
@@ -174,6 +175,33 @@ namespace Toolbox.Graphics
         /// <summary>
         /// 
         /// </summary>
+        protected void ProcessBillboardUpright(Transform faceTarget, bool forceUpdate = false)
+        {
+            if (!isActiveAndEnabled && !forceUpdate) return;
+
+            //NOTE: If there is more than one camera rendering, Frameskip won't work so hot!
+            if (Counter < FrameSkip)// && Time.deltaTime < CrimsonUtility.FourtyFifthFrameTime)
+            {
+                Counter++;
+                return;
+            }
+
+            Counter = 0;
+            UpdateViewUpright(faceTarget);
+
+            #if UNITY_EDITOR
+            if (Application.isPlaying)
+            {
+                if (UpdateOnlyOnEnable) enabled = false;
+            }
+            #else
+            if (UpdateOnlyOnEnable)enabled = false;
+            #endif
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         protected void UpdateView(Transform target)
         {
             if (target == null) return;
@@ -203,6 +231,27 @@ namespace Toolbox.Graphics
             //
             //  Trans.LookAt(dir);
             //  Trans.Rotate(0, 180, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected void UpdateViewUpright(Transform target)
+        {
+            if (target == null) return;
+            Vector3 dir = target.forward;
+            if (LocalRot) Trans.localRotation = Quaternion.LookRotation(dir);
+            else Trans.rotation = Quaternion.LookRotation(dir);
+
+            var eangles = Trans.eulerAngles;
+            eangles.x = 0;
+            eangles.z = 0;
+            Trans.eulerAngles = eangles;
+
+            if (PositionOffset != Vector3.zero)
+            {
+                Trans.localPosition = Trans.InverseTransformDirection(Trans.up) + PositionOffset;
+            }
         }
 
         /// <summary>

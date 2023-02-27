@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Toolbox.Graphics;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Crimson
@@ -59,7 +60,8 @@ namespace Crimson
         void OnWillRenderObject()
         {
             if (!isActiveAndEnabled) return;
-            UpdateView(Camera.current.transform);
+            if (RenderEventCapture.Instance == null) return;
+            UpdateView(RenderEventCapture.Instance.CurrentCamera.transform);
 
             #if UNITY_EDITOR
             if (Application.isPlaying)
