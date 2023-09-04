@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Sirenix.OdinInspector;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Used to set the _MainTex property of a Material

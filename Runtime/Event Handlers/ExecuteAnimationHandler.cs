@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Handler for executing animations that is meant to be called by other objects or linked to UnityEvents.

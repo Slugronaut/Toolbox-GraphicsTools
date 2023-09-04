@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Changes a texture's offsets over time.

@@ -2,7 +2,7 @@
 using System.Linq;
 using Sirenix.OdinInspector;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Controls the alpha of the _Color property of all Renderers attached to this hierarchy.

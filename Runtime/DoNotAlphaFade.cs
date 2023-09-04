@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Toolbox
+namespace Peg
 {
     /// <summary>
     /// Can be used to mark a GameObject that is a child of

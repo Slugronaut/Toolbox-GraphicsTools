@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     [RequireComponent(typeof(MeshRenderer))]
     [ExecuteInEditMode]

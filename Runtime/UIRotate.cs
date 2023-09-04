@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Provides an extension to UI.Graphic elements that allows them to

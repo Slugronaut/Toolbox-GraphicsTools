@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     public static class Colorx
     {

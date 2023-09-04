@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Offsets the vanishing point of a perspective camera.

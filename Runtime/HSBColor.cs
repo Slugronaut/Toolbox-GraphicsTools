@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     [System.Serializable]
     public struct HSBColor

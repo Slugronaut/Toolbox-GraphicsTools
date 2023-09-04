@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System;
-using Toolbox.Graphics;
+using Peg.Graphics;
 
-namespace Toolbox.ToolboxEditor
+namespace Peg.ToolboxEditor
 {
     /// <summary>
     /// Necessary because FieldOfViewDrawer uses properties extensively to internally manage

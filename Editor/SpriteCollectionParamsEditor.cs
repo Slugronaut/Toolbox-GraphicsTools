@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
-using Toolbox.Graphics;
+using Peg.Graphics;
 
-namespace Toolbox.ToolboxEditor
+namespace Peg.ToolboxEditor
 {
     /// <summary>
     /// 

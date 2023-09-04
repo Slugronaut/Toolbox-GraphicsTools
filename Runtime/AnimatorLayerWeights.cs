@@ -1,7 +1,7 @@
-﻿using Toolbox.Messaging;
+﻿using Peg.Messaging;
 using UnityEngine;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Listens for a command that instructs it to change layers weights on an animator.

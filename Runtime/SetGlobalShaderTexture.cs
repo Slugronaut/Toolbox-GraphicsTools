@@ -1,8 +1,8 @@
-﻿using Toolbox.AutoCreate;
+﻿using Peg.AutoCreate;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Sets a global shader texture property.

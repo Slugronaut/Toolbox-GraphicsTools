@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Simple event handlers that can be linked to UnityEvents in the inspector.

@@ -1,8 +1,8 @@
-﻿using Toolbox.Math;
+﻿using Peg.Lib;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Invokes listeners whenever this object's center leaves the camera's viewport.
@@ -54,7 +54,7 @@ namespace Toolbox.Graphics
 
         private void OnEnable()
         {
-            if (MainCam == null || Toolbox.TypeHelper.IsReferenceNull(MainCam))
+            if (MainCam == null || Peg.TypeHelper.IsReferenceNull(MainCam))
                 MainCam = Camera.main;
             JustSpawned = true;
         }

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
-using Toolbox;
+using Peg;
+using Peg.Lib;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Allows a screen-space UI element to follow a world-space target onscreen.
@@ -38,8 +39,8 @@ namespace Toolbox.Graphics
                 {
                     float delta = Time.deltaTime;
                     Vector2 curr = Rect.position;
-                    float x = Math.MathUtils.SmoothApproach(curr.x, Last.x, p1.x, Smoothing, delta);
-                    float y = Math.MathUtils.SmoothApproach(curr.y, Last.y, p1.y, Smoothing, delta);
+                    float x = MathUtils.SmoothApproach(curr.x, Last.x, p1.x, Smoothing, delta);
+                    float y = MathUtils.SmoothApproach(curr.y, Last.y, p1.y, Smoothing, delta);
                     curr = new Vector2(x, y);
                     Last = curr;
                     Rect.position = curr;

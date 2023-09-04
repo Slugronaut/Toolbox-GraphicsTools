@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 #endif
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// For each mesh renderer attached to this hierarchy, it will save

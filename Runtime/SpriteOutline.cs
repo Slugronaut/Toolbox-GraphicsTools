@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Attach to a gameobject that has a SpriteRenderer to allow it to display outlines.

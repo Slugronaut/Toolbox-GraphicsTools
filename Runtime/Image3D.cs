@@ -9,7 +9,7 @@ using UnityEngine.UI;
 using Sirenix.OdinInspector;
 
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Utility component for rendering 3D meshes on a uGUI canvas.

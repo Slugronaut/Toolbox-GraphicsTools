@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Reflection;
-using Toolbox.Graphics;
+using Peg.Graphics;
 
-namespace Toolbox.ToolboxEditor
+namespace Peg.ToolboxEditor
 {
     /// <summary>
     /// Tool for easily painting sprites as decals.

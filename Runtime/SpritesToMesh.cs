@@ -8,7 +8,7 @@ using Sirenix.OdinInspector;
 using UnityEditor;
 #endif
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Converts a collection of sprites to a single mesh.

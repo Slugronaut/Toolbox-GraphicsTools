@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 using Sirenix.OdinInspector;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Flickers all renderers of this heirarchy.

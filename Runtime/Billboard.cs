@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Used to orient sprites directly towards the camera so as to

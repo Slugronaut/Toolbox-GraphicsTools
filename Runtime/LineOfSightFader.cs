@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using Toolbox.Behaviours;
-using Toolbox.Collections;
-using Toolbox.Math;
+using Peg.Behaviours;
+using Peg.Util;
+using Peg.Lib;
 using UnityEngine;
 
 
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Performs a raycast and fades the alpha

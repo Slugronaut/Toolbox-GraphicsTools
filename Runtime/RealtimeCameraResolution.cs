@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Allows adjusting of a camera's resolution in realtime using

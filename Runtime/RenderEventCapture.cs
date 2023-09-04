@@ -1,10 +1,10 @@
 using System;
-using Toolbox.AutoCreate;
+using Peg.AutoCreate;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 
-namespace Toolbox.Graphics
+namespace Peg.Graphics
 {
     /// <summary>
     /// Handles the beginning of each camera's rendering in SRPs. This is the only
