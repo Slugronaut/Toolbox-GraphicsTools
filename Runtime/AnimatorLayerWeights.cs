@@ -1,4 +1,5 @@
-﻿using Peg.Messaging;
+﻿using Peg.MessageDispatcher;
+using Peg.Messaging;
 using UnityEngine;
 
 namespace Peg.Graphics
